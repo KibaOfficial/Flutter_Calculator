@@ -1,16 +1,38 @@
-# calc
+# Taschenrechner
 
-A new Flutter project.
+Ein einfacher Taschenrechner in Flutter, der grundlegende mathematische Operationen ausführen kann.
 
-## Getting Started
+## Funktionen
 
-This project is a starting point for a Flutter application.
+- Addition, Subtraktion, Multiplikation und Division von Zahlen
+- Klammern zur Priorisierung von Operationen
+- Löschen von Eingaben und Zurücksetzen des Rechners
 
-A few resources to get you started if this is your first Flutter project:
+## Technologie
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Dieser Taschenrechner wurde mit Flutter entwickelt und verwendet die math_expressions-Bibliothek, um mathematische Ausdrücke auszuwerten.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Installation
+
+1. Stellen Sie sicher, dass Flutter auf Ihrem System installiert ist.
+2. Klone dieses Repository: `git clone https://github.com/your-username/your-repo.git`
+3. Navigiere in das Projektverzeichnis: `cd your-repo`
+4. Führe `flutter pub get` aus, um die Abhängigkeiten zu installieren.
+5. Starte die Anwendung: `flutter run`
+
+## Screenshots
+
+Füge hier Screenshots oder GIFs hinzu, die den Taschenrechner in Aktion zeigen.
+
+## Autoren
+
+- Vorname Nachname - [GitHub-Profil](https://github.com/username)
+
+## Beitrag
+
+Beiträge sind willkommen! Wenn du einen Fehler gefunden hast oder einen Verbesserungsvorschlag hast, erstelle bitte einen Pull Request.
+
+## Lizenz
+
+Dieses Projekt ist unter der MIT-Lizenz lizenziert. Weitere Informationen findest du in der [LICENSE](LICENSE)-Datei.
+
