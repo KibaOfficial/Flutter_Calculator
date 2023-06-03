@@ -1,6 +1,7 @@
 # Taschenrechner
 
 Ein einfacher Taschenrechner in Flutter, der grundlegende mathematische Operationen ausführen kann.
+![Screenshot 2023-06-02 204610](https://github.com/LPRG-Devs/Flutter_Calculator/assets/79871111/5d495985-2707-4f8c-95d7-9a551842a433)
 
 ## Funktionen
 
