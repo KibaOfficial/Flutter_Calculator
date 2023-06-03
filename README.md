@@ -15,8 +15,8 @@ Dieser Taschenrechner wurde mit Flutter entwickelt und verwendet die math_expres
 ## Installation
 
 1. Stellen Sie sicher, dass Flutter auf Ihrem System installiert ist.
-2. Klone dieses Repository: `git clone https://github.com/your-username/your-repo.git`
-3. Navigiere in das Projektverzeichnis: `cd your-repo`
+2. Klone dieses Repository: `git clone [https://github.com/your-username/your-repo.git](https://github.com/LPRG-Devs/Flutter_Calculator.git)`
+3. Navigiere in das Projektverzeichnis: `cd Flutter_Calculator`
 4. Führe `flutter pub get` aus, um die Abhängigkeiten zu installieren.
 5. Starte die Anwendung: `flutter run`
 
@@ -26,7 +26,7 @@ Füge hier Screenshots oder GIFs hinzu, die den Taschenrechner in Aktion zeigen.
 
 ## Autoren
 
-- Vorname Nachname - [GitHub-Profil](https://github.com/username)
+- KibaOfficial - [GitHub-Profil](https://github.com/LPRG-Devs)
 
 ## Beitrag
 
