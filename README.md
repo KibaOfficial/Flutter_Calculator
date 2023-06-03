@@ -2,8 +2,6 @@
 
 Ein einfacher Taschenrechner in Flutter, der grundlegende mathematische Operationen ausführen kann.
 
-![Screenshot 2023-06-02 204610](https://github.com/LPRG-Devs/Flutter_Calculator/assets/79871111/5d495985-2707-4f8c-95d7-9a551842a433)
-
 ## Funktionen
 
 - Addition, Subtraktion, Multiplikation und Division von Zahlen
@@ -24,7 +22,8 @@ Dieser Taschenrechner wurde mit Flutter entwickelt und verwendet die math_expres
 
 ## Screenshots
 
-Füge hier Screenshots oder GIFs hinzu, die den Taschenrechner in Aktion zeigen.
+![Screenshot 2023-06-02 204610](https://github.com/LPRG-Devs/Flutter_Calculator/assets/79871111/80c9c7bf-7d68-4b55-90eb-5d221a4b794e)
+
 
 ## Autoren
 
