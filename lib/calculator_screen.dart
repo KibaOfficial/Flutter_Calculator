@@ -45,7 +45,8 @@ class _CalculatorState extends State<Calculator> {
           children: [
             Icon(Icons.calculate, color: Colors.lightGreen, size: 40),
             SizedBox(width: 5),
-            Text('Calculator', style: TextStyle(color: Colors.white, fontSize: 28))
+            Text('Calculator',
+                style: TextStyle(color: Colors.white, fontSize: 28))
           ],
         ),
         elevation: 0,
@@ -54,7 +55,7 @@ class _CalculatorState extends State<Calculator> {
       body: Column(
         children: [
           SizedBox(
-            height: MediaQuery.of(context).size.height/3.7,
+            height: MediaQuery.of(context).size.height / 3.7,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -85,30 +86,31 @@ class _CalculatorState extends State<Calculator> {
             ),
           ),
           const Divider(color: Colors.white),
-          Expanded(child: Container(
-            padding: const EdgeInsets.all(10),
-            child: GridView.builder(
-              itemCount: buttonList.length,
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 4,
-                crossAxisSpacing: 12,
-                mainAxisSpacing: 12,
-              ), 
-              itemBuilder: (BuildContext context, int index){
-                return customButton(buttonList[index]);
-              },
+          Expanded(
+            child: Container(
+              padding: const EdgeInsets.all(10),
+              child: GridView.builder(
+                itemCount: buttonList.length,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 4,
+                  crossAxisSpacing: 12,
+                  mainAxisSpacing: 12,
+                ),
+                itemBuilder: (BuildContext context, int index) {
+                  return customButton(buttonList[index]);
+                },
+              ),
             ),
-          ),
           ),
         ],
       ),
     );
   }
 
-  Widget customButton(String text){
+  Widget customButton(String text) {
     return InkWell(
       splashColor: const Color(0xFF1D2630),
-      onTap: (){
+      onTap: () {
         setState(() {
           handleButtons(text);
         });
@@ -140,19 +142,19 @@ class _CalculatorState extends State<Calculator> {
     );
   }
 
-  getColor(String text){
-    if (text == "/" || 
-    text == "+" || 
-    text == "-" || 
-    text == "C" || 
-    text == "(" || 
-    text == ")") {
+  getColor(String text) {
+    if (text == "/" ||
+        text == "+" ||
+        text == "-" ||
+        text == "C" ||
+        text == "(" ||
+        text == ")") {
       return const Color.fromARGB(255, 252, 100, 100);
     }
     return Colors.white;
   }
 
-  getBgColor(String text){
+  getBgColor(String text) {
     if (text == "AC") {
       return const Color.fromARGB(255, 252, 100, 100);
     }
@@ -162,7 +164,7 @@ class _CalculatorState extends State<Calculator> {
     return const Color(0xFF1D2630);
   }
 
-  handleButtons(String text){
+  handleButtons(String text) {
     if (text == "AC") {
       userInput = "";
       result = "0";
@@ -170,27 +172,28 @@ class _CalculatorState extends State<Calculator> {
     }
     if (text == "C") {
       if (userInput.isNotEmpty) {
-        userInput = userInput.substring(0, userInput.length -1);
+        userInput = userInput.substring(0, userInput.length - 1);
         return;
-      }
-      else {
+      } else {
         return null;
       }
     }
 
     if (text == "=") {
-      result = calculate();
-      if (result.endsWith(".0")) {
-        result = result.replaceAll(".0", "");
-        return;
+      if (userInput.isNotEmpty && !userInput.endsWith("=")) {
+        result = calculate();
+        if (result.endsWith(".0")) {
+          result = result.replaceAll(".0", "");
+        }
+        userInput += "=";
       }
+      return;
     }
 
     userInput = userInput + text;
-
   }
 
-  String calculate(){
+  String calculate() {
     try {
       var exp = Parser().parse(userInput);
       var evaluation = exp.evaluate(EvaluationType.REAL, ContextModel());
@@ -199,5 +202,4 @@ class _CalculatorState extends State<Calculator> {
       return "Error";
     }
   }
-
 }
